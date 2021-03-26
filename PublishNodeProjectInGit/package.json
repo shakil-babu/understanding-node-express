@@ -1,0 +1,10 @@
+{
+  "name": "PublishNodeProjectInGit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Shakil Babu",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

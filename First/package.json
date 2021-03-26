@@ -1,0 +1,10 @@
+{
+  "name": "Learning_node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Shakil Babu",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
