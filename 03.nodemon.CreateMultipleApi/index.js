@@ -30,3 +30,4 @@ app.get('/name', (req, res) => {
     res.send(names);
 })
 app.listen(4000, console.log('I am opening.........'));
+
