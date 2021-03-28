@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <input type="number" placeholder="number">
+    <button>Find</button>
+    <table border="1">
+         <thead>
+           <tr>
+              <th>Name:</th>
+              <th>Email:</th>
+              <th>UserName:</th>
+           </tr>
+         </thead>
+         <tbody id='show'>
+         </tbody>
+
+       </table>
+
+    <!-- script -->
+    <script>
+        const show = document.getElementById('show');
+        const btn = document.querySelector('button');
+        const input = document.querySelector('input');
+
+        btn.addEventListener('click', () => {
+           const value = input.value ;
+           const url = `http://localhost:3000/users/${value}`;
+           fetch(url)
+           .then(res => res.json())
+           .then(data => displayData(data) )
+       });
+
+       const displayData = (data)=>{
+        show.innerHTML = `
+                <tr>
+                    <td>${data.name}</td>
+                    <td>${data.email}</td>
+                    <td>${data.username}</td>
+                </tr>
+
+                `
+                console.log(data);
+       }
+       
+    </script>
+</body>
+</html>
